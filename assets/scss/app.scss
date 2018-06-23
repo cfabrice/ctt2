@@ -1,5 +1,5 @@
 @import "~bulma/sass/utilities/_all";
-
+$body-size: 20px;
 // Set your colors
 //$primary: #8c67ef;
 $primary: #0074D9;
@@ -29,3 +29,24 @@ $link-focus-border: $primary;
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+html {
+    position: relative;
+    min-height: 100vh;
+}
+body {
+    //font-family: 'Roboto', sans-serif;
+}
+.main-content{
+    padding:2rem 0 6rem 0;
+}
+.footer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    padding:2rem 1rem;
+}
+.is-active {
+    font-weight: bold;
+    //background: $primary-invert;
+}

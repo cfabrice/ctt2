@@ -25,7 +25,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href:"https://fonts.googleapis.com/css?family=Roboto"}
+     // { rel: 'stylesheet', href:"https://fonts.googleapis.com/css?family=Roboto"}
     ]
   },
 
@@ -60,6 +60,9 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    ['@nuxtjs/markdownit', {
+      injected: true
+    }],
     // Doc: https://buefy.github.io/#/documentation
     //'nuxt-buefy',
     ['nuxt-buefy', { css: true, materialDesignIcons: true }],
