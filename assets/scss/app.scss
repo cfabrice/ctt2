@@ -50,3 +50,14 @@ body {
     font-weight: bold;
     //background: $primary-invert;
 }
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+
+  .page-enter-active, .page-leave-active {
+      transition: all 0.9s;
+  }
+  .page-enter, .page-leave-active {
+      opacity:0;
+      transform: scale(0);
+  }
+

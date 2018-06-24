@@ -61,7 +61,7 @@
         showNav: false,
        menu: [
         { href: '/', title: 'Home' },
-        { href: '/about', title: 'About Us' },
+        { href: '/le-club', title: 'Le Club' },
         { href: '/inspire', title: 'Inspire' },
         // { href: '/services', title: 'Services' },
         // // {href: '#', title: 'Our Clients'},

@@ -47,6 +47,10 @@ module.exports = {
   css: [
     '@/assets/scss/app.scss', // use our build, as entered via app.scss
   ],
+  transition: {
+    name:"page"
+//    mode: "out-in"
+  },
 
   /*
   ** Plugins to load before mounting the App

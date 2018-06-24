@@ -4,7 +4,7 @@
     <Hero/>
 
 
-    <section class="main-content columns">
+     <section class="main-content columns">
 
       <aside class="column is-2 section">
         <p class="menu-label is-hidden-touch">General</p>
@@ -21,7 +21,11 @@
         <nuxt />
       </div>
 
+
     </section>
+
+
+
     <Footer/>
   </div>
 </template>
@@ -31,6 +35,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
   export default {
+   // transition: 'page',
     components: {
       Navigation,
       Footer,
