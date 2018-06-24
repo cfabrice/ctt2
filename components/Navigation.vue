@@ -3,7 +3,7 @@
     <nav class="navbar header has-shadow is-primary is-fixed-top" role="navigation" aria-label="main navigation" >
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28">
+          <img src="~assets/img/logo.svg" alt="Buefy" height="38">
         </a>
 
         <div class="navbar-burger" data-target="navMenu" v-on:click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }">
@@ -15,7 +15,8 @@
 
       <div id="navMenu" class="navbar-menu" v-bind:class="{ 'is-active' : showNav }">
         <div class="navbar-start">
-            <a class="navbar-item" v-for="link in menu" :href="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</a>
+            <!-- <a class="navbar-item" v-for="link in menu" :href="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</a> -->
+             <nuxt-link class="navbar-item" v-for="link in menu" :to="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</nuxt-link>
 
 
 

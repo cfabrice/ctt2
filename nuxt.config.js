@@ -25,7 +25,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-     // { rel: 'stylesheet', href:"https://fonts.googleapis.com/css?family=Roboto"}
+      //{ rel: 'stylesheet', href:"https://fonts.googleapis.com/css?family=Fugaz+One"}
     ]
   },
 
@@ -47,10 +47,10 @@ module.exports = {
   css: [
     '@/assets/scss/app.scss', // use our build, as entered via app.scss
   ],
-  transition: {
-    name:"page"
-//    mode: "out-in"
-  },
+//   transition: {
+//     name:"page"
+// //    mode: "out-in"
+//   },
 
   /*
   ** Plugins to load before mounting the App
