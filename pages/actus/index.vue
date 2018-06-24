@@ -10,11 +10,11 @@
           <div class="card">
             <header class="card-header">
               <p class="card-header-title has-text-grey">
-               <nuxt-link :to="post._path"> {{ post.title }} </nuxt-link>              </p>
+               <nuxt-link :to="post._path"> {{ post.title | capitalize}} </nuxt-link>              </p>
             </header>
             <div class="card-content">
               <div class="content has-text-centered">
-                <b-icon :icon="calendar" size="is-large" type="is-primary" />     {{ post.date }}
+                <b-icon icon="calendar" size="is-small" type="is-primary" />     {{ post.date | formatDate}}
 
                 <div v-html="$md.render(post.body)"></div>
               </div>
@@ -34,12 +34,17 @@
             </ul>
         </div> -->
     </div>
+
   </section>
 </template>
 
 <script>
+
+
+
   export default {
     components: {
+
       //AppLogo,
       //'b-modal': bModal
     },
@@ -47,6 +52,7 @@
       //  'b-modal': bModalDirective
     },
     data() {
+
       // Using webpacks context to gather all files from a folder
       const context = require.context('~/content/actus/', false, /\.json$/);
 
@@ -56,9 +62,17 @@
       }));
 
       return {
+
         posts
       };
+    },
+    computed: {
+    //   date: function () {
+    //     return this.post.date.toLocaleDateString('de-DE', options)
+    //   }
     }
+
+
   }
 
 </script>

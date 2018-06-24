@@ -75,7 +75,9 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~plugins/filters.js'
+  ],
 
   /*
    ** Nuxt.js modules
@@ -91,6 +93,7 @@ module.exports = {
       css: true,
       materialDesignIcons: true
     }],
+    ['@nuxtjs/moment', ['fr']]
   ],
   /*
    ** Axios module configuration
