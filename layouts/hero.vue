@@ -1,10 +1,11 @@
 <template>
-  <div>
+<div>
     <Navigation/>
 
-    <!-- <Hero/> -->
 
+    <Hero/>
 
+  <!-- <transition name="layout"> -->
      <section class="main-content columns">
 
       <!-- <aside class="column is-2 section">
@@ -24,11 +25,12 @@
 
 
     </section>
+  <!-- </transition> -->
 
 
 
     <Footer/>
-  </div>
+</div>
 </template>
 
 <script>
@@ -36,7 +38,8 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
   export default {
-   // transition: 'page',
+   // transition:"layout",
+
     components: {
       Navigation,
       Footer,

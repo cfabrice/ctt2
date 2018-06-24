@@ -2,9 +2,9 @@
 
     <nav class="navbar header has-shadow is-primary is-fixed-top" role="navigation" aria-label="main navigation" >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+        <nuxt-link class="navbar-item" to="/">
           <img src="~assets/img/logo.svg" alt="Buefy" height="38">
-        </a>
+        </nuxt-link>
 
         <div class="navbar-burger" data-target="navMenu" v-on:click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }">
           <span></span>
@@ -61,12 +61,12 @@
       return {
         showNav: false,
        menu: [
-        { href: '/', title: 'Home' },
+        { href: '/', title: 'Accueil' },
         { href: '/le-club', title: 'Le Club' },
-        { href: '/inspire', title: 'Inspire' },
-        // { href: '/services', title: 'Services' },
-        // // {href: '#', title: 'Our Clients'},
-        // { href: '/hr-advice', title: 'Free Advice' },
+        //{ href: '/inspire', title: 'Inspire' },
+        { href: '/les-cours', title: 'Les Cours' },
+        {href: '/adhésion', title: 'Adhésion'},
+        { href: '/actus', title: 'Actualités' },
          { href: '/contact', title: 'Contact' },
       ],
       }

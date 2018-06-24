@@ -41,14 +41,5 @@ export default {
   img {
     max-width: 300px;
   }
-  .hidden {
-    display: none;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-[type="submit"] {
-  margin-top:3rem;
-}
+
 </style>
