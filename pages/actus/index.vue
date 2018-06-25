@@ -16,7 +16,7 @@
               <div class="content has-text-centered">
                 <b-icon icon="calendar" size="is-small" type="is-primary" />     {{ post.date | formatDate}}
 
-                <div v-html="$md.render(post.body)"></div>
+                <div v-html="$md.render(post.body.slice(0, 120))+'...'">...</div>
               </div>
 
             </div>
@@ -35,9 +35,15 @@
         </div> -->
     </div>
     <div class="columns  is-mobile">
+
         <nav class="pagination is-small" role="navigation" aria-label="pagination">
           <a class="pagination-previous" v-if="page != 1" @click="page--">Page précédente</a>
-          <!-- <a class="pagination-link" v-for="pageNumber in pages.slice(page-1, page+5)" :key="pageNumber"  @click="page = pageNumber">1</a> -->
+          <!-- <ul class="pagination-list">
+            <li v-for="index in total" :key="index"   @click="page = index">
+              <a class="pagination-link" @click="myFilter"
+              :class="{ 'is-current': isActive }" >{{index}}</a>
+            </li>
+          </ul> -->
           <a class="pagination-next"  @click="page++" v-if="page < total">Page suivante</a>
         </nav>
       </div>
@@ -67,16 +73,20 @@
         // const perPage = '';
          //const pages = [];
       return {
-
+        //isActive:false,
         posts,
 
         page: 1,
-        perPage: 1,
+        perPage: 9,
         pages:[]
 
       };
     },
     methods: {
+      // myFilter: function(){
+      //       this.isActive = !this.isActive;
+      //     // some code to filter users
+      //   },
 
       setPages () {
         console.log(Math.ceil(this.posts.length / this.perPage));
@@ -99,20 +109,20 @@
   //   this.getPosts();
   // },
   // not working !!
-  watch: {
-    posts () {
-      this.setPages();
-    }
-  },
+  // watch: {
+  //   posts () {
+  //     this.setPages();
+  //   }
+  // },
   computed: {
     displayedPosts () {
       return this.paginate(this.posts);
     },
     total () {
-
       let total = Math.ceil(this.posts.length / this.perPage);
       return total;
     }
+
   },
 
 
