@@ -89,14 +89,14 @@
       //   },
 
       setPages () {
-        console.log(Math.ceil(this.posts.length / this.perPage));
+
         let numberOfPages = Math.ceil(this.posts.length / this.perPage);
         for (let index = 1; index <= numberOfPages; index++) {
           this.pages.push(index);
         }
       },
       paginate (posts) {
-        console.log(Math.ceil(this.posts.length / this.perPage));
+        //console.log(Math.ceil(this.posts.length / this.perPage));
         let page = this.page;
         let perPage = this.perPage;
         let from = (page * perPage) - perPage;

@@ -14,9 +14,9 @@
             </header>
             <div class="card-content">
               <div class="content has-text-centered">
-                <b-icon icon="calendar" size="is-small" type="is-primary" />     {{ post.date }}
+                <b-icon icon="calendar" size="is-small" type="is-primary" />     {{ post.date | formatDate }}
 
-                <div v-html="$md.render(post.body)"></div>
+                <div v-html="$md.render(post.body).slice(0, 200)+'...'"></div>
               </div>
 
             </div>

@@ -9,10 +9,10 @@ Vue.filter('formatDate', function(value) {
     }
   });
 
-  // Vue.filter('extrait', function(value) {
-  //   if (value) {
-  //     return toString(value.replace(/^(.{120}[^\s]*).*/, "$1"));
-  //   }
-  // });
+  Vue.filter('extrait', function(value) {
+    if (value) {
+      return toString(value.replace(/^(.{120}[^\s]*).*/, "$1"));
+    }
+  });
 
 
