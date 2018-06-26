@@ -38,12 +38,12 @@
 
         <nav class="pagination is-small" role="navigation" aria-label="pagination">
           <a class="pagination-previous" v-if="page != 1" @click="page--">Page précédente</a>
-          <!-- <ul class="pagination-list">
+          <ul class="pagination-list">
             <li v-for="index in total" :key="index"   @click="page = index">
-              <a class="pagination-link" @click="myFilter"
-              :class="{ 'is-current': isActive }" >{{index}}</a>
+              <a class="pagination-link" @click="selected = index"
+              :class="{ 'is-current': selected == index }" >{{index}}</a>
             </li>
-          </ul> -->
+          </ul>
           <a class="pagination-next"  @click="page++" v-if="page < total">Page suivante</a>
         </nav>
       </div>
@@ -73,11 +73,11 @@
         // const perPage = '';
          //const pages = [];
       return {
-        //isActive:false,
+        selected:undefined,
         posts,
 
         page: 1,
-        perPage: 9,
+        perPage: 2,
         pages:[]
 
       };
