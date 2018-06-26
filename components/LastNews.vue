@@ -48,11 +48,12 @@
       }));
 
       return {
-        posts
+        posts:posts.reverse()
       };
     },
     computed: {
       filteredPosts: function () {
+        //return this.posts.slice(0, 2)
         return this.posts.slice(0, 2)
       }
     }

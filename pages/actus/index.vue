@@ -75,7 +75,7 @@
       return {
         selected:1,
         index:1,
-        posts,
+        posts:posts.reverse(),
 
         page: 1,
         perPage: 2,
