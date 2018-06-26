@@ -2,22 +2,22 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-publish_mode: editorial_workflow
+#publish_mode: editorial_workflow
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 display_url: https://ctt-puplinge.ch
 collections:
   - name: "actus" # Used in routes, e.g., /admin/collections/blog
     label: "Actus" # Used in the UI
-    folder: "content/actus/posts" # The path to the folder where the documents are stored
+    folder: "content/actus" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      #- {label: "Tags", name: "tags", widget: "list"}
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
 
@@ -38,21 +38,25 @@ collections:
     files:
     - label: "About Page"
       name: "about"
-      file: "content/about.json"
+      slug: "about"
+      format: 'json'
+      file: "content/s/about.json"
       fields:
         - {label: Subtitle, name: subtitle, widget: string}
         - {label: Title, name: title, widget: markdown}
         - {label: Body, name: body, widget: markdown}
-        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Image", name: "image", widget: "image", required: false}
     - label: "Services Page"
       name: "services"
-      file: "content/pages/services.yml"
+      file: "content/s/services.json"
+      format: 'json'
       fields:
         - {label: Subtitle, name: subtitle, widget: string}
         - {label: Title, name: title, widget: markdown}
         - {label: Body, name: body, widget: markdown}
         - label: "Featured Services"
           name: "services"
+          slug: "services"
           widget: list
           fields:
             - {label: Title, name: title, widget: markdown}
