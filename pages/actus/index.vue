@@ -37,14 +37,14 @@
     <div class="columns  is-mobile">
 
         <nav class="pagination is-small" role="navigation" aria-label="pagination">
-          <a class="pagination-previous" v-if="page != 1" @click="page--">Page précédente</a>
+          <a class="pagination-previous" v-if="page != 1" @click="page--; selected--">Page précédente</a>
           <ul class="pagination-list">
             <li v-for="index in total" :key="index"   @click="page = index">
               <a class="pagination-link" @click="selected = index"
-              :class="{ 'is-current': selected == index }" >{{index}}</a>
+              :class="{ 'is-current': index == selected }" >{{index}}</a>
             </li>
           </ul>
-          <a class="pagination-next"  @click="page++" v-if="page < total">Page suivante</a>
+          <a class="pagination-next"  @click="page++; selected++ " v-if="page < total">Page suivante</a>
         </nav>
       </div>
 
@@ -73,7 +73,8 @@
         // const perPage = '';
          //const pages = [];
       return {
-        selected:undefined,
+        selected:1,
+        index:1,
         posts,
 
         page: 1,
