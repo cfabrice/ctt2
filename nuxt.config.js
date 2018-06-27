@@ -51,7 +51,9 @@ module.exports = {
    ** Route config for pre-rendering
    */
   generate: {
-    routes: dynamicRoutes
+    routes: dynamicRoutes,
+    routes: ['404']
+
   },
 
   /*

@@ -1,30 +1,39 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
-        <div class="column">
-            <h1 class="title">Actualités</h1>
-        </div>
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-12-mobile is-6-tablet is-4-desktop is-3-widescreen">
+        <h1 class="title is-1 has-text-centered">Actualités</h1>
+      </div>
     </div>
     <div class="columns is-multiline is-mobile">
-        <div v-for="post in displayedPosts" :key="post._path" class="column is-one-third ">
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title has-text-grey">
-               <nuxt-link :to="post._path"> {{ post.title | capitalize}} </nuxt-link>              </p>
-            </header>
-            <div class="card-content">
-              <div class="content has-text-centered">
-                <b-icon icon="calendar" size="is-small" type="is-primary" />     {{ post.date | formatDate}}
-
-                <div v-html="$md.render(post.body).slice(0, 200)+'...'"></div>
-              </div>
-
-            </div>
-
+      <div v-for="post in displayedPosts" :key="post._path" class="column is-one-third ">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image ">
+              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
           </div>
-        </div>
+          <!-- <header class="card-header ">
+            <p class="card-header-title  ">
+              <nuxt-link class="" :to="post._path"> {{ post.title }} </nuxt-link>
+            </p>
+          </header> -->
+          <div class="card-content has-text-centered">
+            <p class="title is-4  ">
+              <nuxt-link class="" :to="post._path"> {{ post.title }} </nuxt-link>
+            </p>
+            <div class="content ">
+              <p class="has-text-centered">
+                <b-icon icon="calendar" size="is-small" type="is-primary" /> {{ post.date }}
+              </p>
+              <div class="" v-html="$md.render(post.body).slice(0, 150)+'...'"></div>
+            </div>
+          </div>
 
-        <!-- <div class="column">
+        </div>
+      </div>
+
+      <!-- <div class="column">
             <ul>
                 <li v-for="post in posts" :key="post.date">
                 <nuxt-link :to="post._path">
@@ -36,31 +45,26 @@
     </div>
     <div class="columns  is-mobile">
 
-        <nav class="pagination is-small" role="navigation" aria-label="pagination">
-          <a class="pagination-previous" v-if="page != 1" @click="page--; selected--">Page précédente</a>
-          <ul class="pagination-list">
-            <li v-for="index in total" :key="index"   @click="page = index">
-              <a class="pagination-link" @click="selected = index"
-              :class="{ 'is-current': index == selected }" >{{index}}</a>
-            </li>
-          </ul>
-          <a class="pagination-next"  @click="page++; selected++ " v-if="page < total">Page suivante</a>
-        </nav>
-      </div>
+      <nav class="pagination is-small" role="navigation" aria-label="pagination">
+        <a class="pagination-previous" v-if="page != 1" @click="page--; selected--">Page précédente</a>
+        <ul class="pagination-list">
+          <li v-for="index in total" :key="index" @click="page = index">
+            <a class="pagination-link" @click="selected = index" :class="{ 'is-current': index == selected }">{{index}}</a>
+          </li>
+        </ul>
+        <a class="pagination-next" @click="page++; selected++ " v-if="page < total">Page suivante</a>
+      </nav>
+    </div>
 
   </section>
 </template>
 
 <script>
-
-
-
   export default {
     components: {
 
     },
-    directives: {
-    },
+    directives: {},
     data() {
       // Using webpacks context to gather all files from a folder
       const context = require.context('~/content/actus/', false, /\.json$/);
@@ -69,17 +73,17 @@
         ...context(key),
         _path: `/actus/${key.replace('.json', '').replace('./', '')}`
       }));
-        // const page = '';
-        // const perPage = '';
-         //const pages = [];
+      // const page = '';
+      // const perPage = '';
+      //const pages = [];
       return {
-        selected:1,
-        index:1,
-        posts:posts.reverse(),
+        selected: 1,
+        index: 1,
+        posts: posts.reverse(),
 
         page: 1,
-        perPage: 2,
-        pages:[]
+        perPage: 9,
+        pages: []
 
       };
     },
@@ -89,42 +93,42 @@
       //     // some code to filter users
       //   },
 
-      setPages () {
+      setPages() {
 
         let numberOfPages = Math.ceil(this.posts.length / this.perPage);
         for (let index = 1; index <= numberOfPages; index++) {
           this.pages.push(index);
         }
       },
-      paginate (posts) {
+      paginate(posts) {
         //console.log(Math.ceil(this.posts.length / this.perPage));
         let page = this.page;
         let perPage = this.perPage;
         let from = (page * perPage) - perPage;
         let to = (page * perPage);
-        return  posts.slice(from, to);
+        return posts.slice(from, to);
       }
 
-  },
-  // created () {
-  //   this.getPosts();
-  // },
-  // not working !!
-  // watch: {
-  //   posts () {
-  //     this.setPages();
-  //   }
-  // },
-  computed: {
-    displayedPosts () {
-      return this.paginate(this.posts);
     },
-    total () {
-      let total = Math.ceil(this.posts.length / this.perPage);
-      return total;
-    }
+    // created () {
+    //   this.getPosts();
+    // },
+    // not working !!
+    // watch: {
+    //   posts () {
+    //     this.setPages();
+    //   }
+    // },
+    computed: {
+      displayedPosts() {
+        return this.paginate(this.posts);
+      },
+      total() {
+        let total = Math.ceil(this.posts.length / this.perPage);
+        return total;
+      }
 
-  },
+    },
 
 
   }
