@@ -1,62 +1,48 @@
 <template>
-  <section class="section">
-    <div class="columns is-multiline is-mobile">
-      <div class="column is-12-mobile is-6-tablet is-4-desktop is-3-widescreen">
-        <h1 class="title is-1 has-text-centered">Actualités</h1>
-      </div>
+  <div>
+    <div class="column ">
+      <h1 class="title is-1 has-text-centered">Actualités</h1>
     </div>
-    <div class="columns is-multiline is-mobile">
-      <div v-for="post in displayedPosts" :key="post._path" class="column is-one-third ">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image ">
-              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <!-- <header class="card-header ">
-            <p class="card-header-title  ">
-              <nuxt-link class="" :to="post._path"> {{ post.title }} </nuxt-link>
-            </p>
-          </header> -->
-          <div class="card-content has-text-centered">
-            <p class="title is-4  ">
-              <nuxt-link class="" :to="post._path"> {{ post.title }} </nuxt-link>
-            </p>
-            <div class="content ">
-              <p class="has-text-centered">
-                <b-icon icon="calendar" size="is-small" type="is-primary" /> {{ post.date }}
-              </p>
-              <div class="" v-html="$md.render(post.body).slice(0, 150)+'...'"></div>
+    <section class="section">
+      <div class="columns is-multiline">
+        <div v-for="post in displayedPosts" :key="post._path" class="column  is-6-tablet is-4-desktop is-3-widescreen ">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image ">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
             </div>
-          </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4  ">
+                <nuxt-link class="" :to="post._path"> {{ post.title }} </nuxt-link>
+              </p>
+              <div class="content ">
+                <p class="has-text-centered">
+                  <b-icon icon="calendar" size="is-small" type="is-primary" /> {{ post.date }}
+                </p>
+                <div class="" v-html="$md.render(post.body).slice(0, 150)+'...'"></div>
+              </div>
+            </div>
 
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- <div class="column">
-            <ul>
-                <li v-for="post in posts" :key="post.date">
-                <nuxt-link :to="post._path">
-                    {{ post.title }}
-                </nuxt-link>
-                </li>
-            </ul>
-        </div> -->
-    </div>
-    <div class="columns  is-mobile">
-
-      <nav class="pagination is-small" role="navigation" aria-label="pagination">
-        <a class="pagination-previous" v-if="page != 1" @click="page--; selected--">Page précédente</a>
-        <ul class="pagination-list">
-          <li v-for="index in total" :key="index" @click="page = index">
-            <a class="pagination-link" @click="selected = index" :class="{ 'is-current': index == selected }">{{index}}</a>
-          </li>
-        </ul>
-        <a class="pagination-next" @click="page++; selected++ " v-if="page < total">Page suivante</a>
-      </nav>
-    </div>
-
-  </section>
+    <section class="section">
+      <div class="columns  is-mobile">
+        <nav class="pagination is-small" role="navigation" aria-label="pagination">
+          <a class="pagination-previous" v-if="page != 1" @click="page--; selected--">Page précédente</a>
+          <ul class="pagination-list">
+            <li v-if="page != 1" v-for="index in total" :key="index" @click="page = index">
+              <a class="pagination-link" @click="selected = index" :class="{ 'is-current': index == selected }">{{index}}</a>
+            </li>
+          </ul>
+          <a class="pagination-next" @click="page++; selected++ " v-if="page < total">Page suivante</a>
+        </nav>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

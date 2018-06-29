@@ -5,8 +5,8 @@
             <h1 class="title">Actualités</h1>
         </div>
     </div> -->
-    <div class="columns is-multiline is-mobile">
-        <div v-for="post in filteredPosts" :key="post.title" class="column is-half ">
+    <div class="columns is-multiline ">
+        <div v-for="post in filteredPosts" :key="post.title" class="column is-half-tablet ">
           <div class="card">
             <header class="card-header">
               <p class="card-header-title has-text-grey">

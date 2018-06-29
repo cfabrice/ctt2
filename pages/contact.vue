@@ -1,17 +1,11 @@
 <template>
-  <article>
-
+  <article class="column is-8-tablet">
     <!-- <img v-bind:src="thumbnail" v-bind:alt="title"/> -->
-
-
-  <div class="container">
-   <h1 class="title is-1">{{ title }}</h1>
-
-
+   <h1 class="title is-1 has-text-centered">{{ title }}</h1>
     <div class="content">
          <!-- <p>{{ body }}</p> -->
-
      <div v-html="$md.render(body)"></div>
+
       <form name="contact" action="/merci" netlify-honeypot="bot-field" method="post" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <p class="hidden">
@@ -32,16 +26,12 @@
         <input class="form-button" type="submit" value="Send message" />
       </form>
     </div>
-  </div>
-
   </article>
 </template>
 
 <script>
-
-
-
-export default {
+export
+default {
     transition: 'page',
   async asyncData({ params }) {
     // const postPromise = process.BROWSER_BUILD

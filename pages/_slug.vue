@@ -1,28 +1,14 @@
 <template>
-  <article>
-
+  <article class="column is-8-tablet">
     <!-- <img v-bind:src="thumbnail" v-bind:alt="title"/> -->
-
-
-  <div class="container">
-   <h1 class="title is-1">{{ title }}</h1>
-
-
-    <div class="content">
-         <!-- <p>{{ body }}</p> -->
-
-     <div v-html="$md.render(body)"></div>
-
-    </div>
-  </div>
-
+      <h1 class="title is-1 has-text-centered">{{ title }}</h1>
+      <div class="content">
+        <div v-html="$md.render(body)"></div>
+      </div>
   </article>
 </template>
 
 <script>
-
-
-
 export default {
     //transition: 'page',
   async asyncData({ params }) {
