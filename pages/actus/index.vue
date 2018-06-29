@@ -9,7 +9,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image ">
-                <img v-if="post.image" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                <img v-if="post.thumbnail" :src="post.thumbnail" :alt="post.title">
               </figure>
             </div>
             <div class="card-content has-text-centered">
