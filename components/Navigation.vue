@@ -6,7 +6,7 @@
           <img src="~assets/img/logo.svg" alt="Buefy" height="38">
         </nuxt-link>
 
-        <div class="navbar-burger" data-target="navMenu" v-on:click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }">
+        <div class="navbar-burger" data-target="navMenu" @click="showNav = !showNav" v-bind:class="{ 'is-active' : showNav }">
           <span></span>
           <span></span>
           <span></span>
@@ -16,7 +16,7 @@
       <div id="navMenu" class="navbar-menu" v-bind:class="{ 'is-active' : showNav }">
         <div class="navbar-start">
             <!-- <a class="navbar-item" v-for="link in menu" :href="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</a> -->
-             <nuxt-link class="navbar-item" v-for="link in menu" :to="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</nuxt-link>
+             <nuxt-link class="navbar-item" v-for="link in menu"  :to="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</nuxt-link>
 
 
 
@@ -75,7 +75,15 @@
     isActive(link) {
       return this.$route.fullPath === link.href;
     },
+    // closenav: {
+    //   $('.navbar-start').collapse('hide');
+    // }
   },
+  watch: {
+    '$route' () {
+      this.showNav = false
+    }
+  }
   }
 
 
