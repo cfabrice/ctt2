@@ -14,16 +14,16 @@
       </div>
 
       <div id="navMenu" class="navbar-menu" v-bind:class="{ 'is-active' : showNav }">
-        <div class="navbar-start">
-            <!-- <a class="navbar-item" v-for="link in menu" :href="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</a> -->
+        <!-- <div class="navbar-start">
+
              <nuxt-link class="navbar-item" v-for="link in menu"  :to="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</nuxt-link>
 
 
 
-        </div>
+        </div> -->
 
         <div class="navbar-end">
-          <div class="navbar-item">
+          <!-- <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
                 <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000"
@@ -46,9 +46,11 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> -->
+         <nuxt-link class="navbar-item" v-for="link in menu"  :to="link.href" v-bind:class="{ 'is-active': isActive(link) }" :key="link.title">{{link.title}}</nuxt-link>
 
+      </div>
+</div>
 
     </nav>
 
@@ -57,6 +59,7 @@
 <script>
 
   export default {
+
     data() {
       return {
         showNav: false,

@@ -24,8 +24,6 @@ export default {
 };
 </script>
 <style media="screen">
-  img {
-    max-width: 300px;
-  }
+
 
 </style>
