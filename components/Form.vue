@@ -1,6 +1,6 @@
 <template>
 
-<section class="section">
+<section class="form">
   <form name="contact" action="/merci" netlify-honeypot="bot-field" method="post" netlify>
     <input type="hidden" name="form-name" value="contact" />
     <p class="hidden">
@@ -8,7 +8,7 @@
         <input name="bot-field">
       </label>
     </p>
-    <div class="field is-horizontal">
+    <div class="field ">
       <div class="field-body">
         <div class="field">
           <p class="control is-expanded has-icons-left">
