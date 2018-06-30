@@ -1,7 +1,7 @@
 <template>
 
 <section class="form">
-  <form name="contact" action="/merci" netlify-honeypot="bot-field" method="post" netlify>
+  <form name="ctt" action="/merci" netlify-honeypot="bot-field" method="post" netlify>
     <input type="hidden" name="form-name" value="contact" />
     <p class="hidden">
       <label>Don’t fill this out:
@@ -12,7 +12,7 @@
       <div class="field-body">
         <div class="field">
           <p class="control is-expanded has-icons-left">
-            <input class="input" type="text" placeholder="Nom">
+            <input class="input" name="nom" type="text" placeholder="Nom">
             <span class="icon is-small is-left">
               <b-icon icon="account" />
             </span>
@@ -20,14 +20,14 @@
         </div>
         <div class="field">
           <p class="control is-expanded">
-            <input class="input" type="text" placeholder="Prénom">
+            <input class="input" name="prenom" type="text" placeholder="Prénom">
           </p>
         </div>
       </div>
     </div>
     <div class="field">
       <p class="control  has-icons-left ">
-        <input class="input" type="text" placeholder="Email">
+        <input class="input" name="email" type="text" placeholder="Email">
         <span class="icon is-small is-left">
           <b-icon icon="email" />
         </span>
@@ -40,7 +40,7 @@
 
       <div class="field ">
         <p class="control has-icons-left">
-          <input class="input" type="tel" placeholder="Votre téléphone">
+          <input class="input" name="tel" type="tel" placeholder="Votre téléphone">
           <span class="icon is-small is-left">
           <b-icon icon="phone" />
         </span>
@@ -54,7 +54,7 @@
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <input class="input" type="text" placeholder="Votre sujet">
+            <input class="input" name="sujet" type="text" placeholder="Votre sujet">
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <textarea class="textarea" placeholder="Tapez votre texte ici..."></textarea>
+            <textarea class="textarea" name="message" placeholder="Tapez votre texte ici..."></textarea>
           </div>
         </div>
       </div>
