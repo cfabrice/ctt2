@@ -5,7 +5,7 @@
     <h1 class="title is-1 has-text-centered">{{ title }}</h1>
     <div class="content">
       <div v-html="$md.render(body)"></div>
-<br>
+        <br>
 
       <p class="text-center">
         <a href="/">Retour sur la page d'accueil</a>
@@ -14,9 +14,11 @@
   </article>
 </template>
 <script>
-export default {
-    //transition: 'page',
-  async asyncData({ params }) {
+
+export
+default {
+    transition: 'page',
+    async asyncData({ params }) {
     // const postPromise = process.BROWSER_BUILD
     //   ? import('~/content/blog/posts/' + params.slug + '.json')
     //   : Promise.resolve(
