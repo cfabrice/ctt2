@@ -45,9 +45,9 @@
 
 </template>
 <script>
-  //
-  //console.log(window.location.pathname);
-  console.log (this);
+
+ // console.log(window.location.pathname);
+ // console.log (this);
 
   export default {
     name: 'CardList',
