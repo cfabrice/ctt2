@@ -90,9 +90,8 @@ module.exports = {
       injected: true
     }],
     // Doc: https://buefy.github.io/#/documentation
-    //'nuxt-buefy',
     ['nuxt-buefy', {
-      css: true,
+      css: false,
       materialDesignIcons: true
     }],
     ['@nuxtjs/moment', ['fr']]
