@@ -1,21 +1,17 @@
 <template>
   <div>
-    <section class="section">
+    <section class="column ">
       <div class="columns is-centered is-multiline">
         <div class="column is-10-tablet">
           <!-- <h3 class="title is-3 has-text-centered">Un petit titre</h3> -->
           <p class="has-text-centered accroche">
             Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis
             dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Curabitur blandit tempus porttitor.Donec sed odio dui. Donec ullamcorper nulla non metus
-            auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere
-            velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</p>
+            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. </p>
         </div>
       </div>
     </section>
-    <section>
+    <section class="main">
       <div class="columns is-multiline is-centered">
         <div class="column is-10-tablet">
           <h3 class="title is-3 has-text-centered">Dernières nouvelles</h3>

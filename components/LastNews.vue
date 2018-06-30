@@ -1,5 +1,5 @@
 <template>
-<section class="section">
+<section class="column">
    <!-- <div class="columns is-mobile">
         <div class="column">
             <h1 class="title">Actualités</h1>

@@ -2,10 +2,12 @@
   <div>
     <Navigation/>
     <Hero/>
-    <div class="container main">
+    <div class="container">
+
 
 
           <nuxt />
+
 
 
     </div>
