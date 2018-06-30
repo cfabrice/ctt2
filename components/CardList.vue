@@ -1,6 +1,6 @@
 <template>
 
-    <div  class="column is-6-tablet is-4-desktop is-3-widescreen ">
+    <div  class="column is-6-tablet  " :class="{ 'is-4-desktop is-3-widescreen ': $nuxt.$route.path !=='/' }">
       <div class="card ">
         <div class="card-image">
           <figure class="image ">
@@ -47,6 +47,7 @@
 <script>
   //
   //console.log(window.location.pathname);
+  console.log (this);
 
   export default {
     name: 'CardList',
