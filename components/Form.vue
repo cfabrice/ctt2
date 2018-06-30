@@ -1,12 +1,9 @@
 <template>
 
 <section class="form">
-  <form name="ctt" action="/merci" netlify-honeypot="bot-field" method="post" netlify>
-    <input type="hidden" name="form-name" value="contact" />
+  <form name="contact" action="/merci" netlify-honeypot="bot-field" method="post" netlify>
     <p class="hidden">
-      <label>Don’t fill this out:
-        <input name="bot-field">
-      </label>
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
     </p>
     <div class="field ">
       <div class="field-body">
@@ -77,7 +74,7 @@
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <button class="button is-primary">
+            <button type="submit" class="button is-primary">
               Envoyer
             </button>
           </div>
