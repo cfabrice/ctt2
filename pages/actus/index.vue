@@ -3,7 +3,7 @@
     <div class="column ">
       <h1 class="title is-1 has-text-centered">Actualités</h1>
     </div>
-    <section class="section">
+    <section class="">
       <div class="columns is-multiline">
 
           <Card-list v-for="post in displayedPosts" :post="post" :key="post._path" />
@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="">
       <div class="columns  is-mobile">
         <nav class="pagination is-small" role="navigation" aria-label="pagination">
           <a class="pagination-previous" v-if="page != 1" @click="page--; selected--">Page précédente</a>
