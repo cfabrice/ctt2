@@ -1,6 +1,7 @@
 <template>
 
-  <section class="form">
+  <section class="section">
+
     <form name="contact" action="/merci" netlify-honeypot="bot-field" method="post" netlify>
 
       <p class="hidden">
