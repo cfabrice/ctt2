@@ -2,6 +2,13 @@
   <div>
     <div class="column ">
       <h1 class="title is-1 has-text-centered">Actualités</h1>
+       <h1 class="title is-1 has-text-centered">{{ title }}</h1>
+    <div class="content">
+      <!-- <p>{{ body }}</p> -->
+      <div v-html="$md.render(body)"></div>
+      <Form/>
+
+    </div>
     </div>
     <section class="">
       <div class="columns is-multiline">
@@ -34,15 +41,28 @@
     components: {
       CardList
     },
+    async asyncData({
+      params
+    }) {
+      // const postPromise = process.BROWSER_BUILD
+      //   ? import('~/content/blog/posts/' + params.slug + '.json')
+      //   : Promise.resolve(
+      //       require('~/content/blog/posts/' + params.slug + '.json')
+      //     );
+
+      let post = await
+      import ('~/content/actus.json');
+      return post;
+    },
 
     directives: {},
     data() {
       // Using webpacks context to gather all files from a folder
-      const context = require.context('~/content/actus/', false, /\.json$/);
+      const context = require.context('~/content/blog/posts/', false, /\.json$/);
 
       const posts = context.keys().map(key => ({
         ...context(key),
-        _path: `/actus/${key.replace('.json', '').replace('./', '')}`
+        _path: `/blog/${key.replace('.json', '').replace('./', '')}`
       }));
       // const page = '';
       // const perPage = '';

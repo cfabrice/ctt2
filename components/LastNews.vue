@@ -35,11 +35,11 @@ import CardList from '@/components/CardList'
 
 
       // Using webpacks context to gather all files from a folder
-      const context = require.context('~/content/actus/', false, /\.json$/);
+      const context = require.context('~/content/blog/posts/', false, /\.json$/);
 
       const posts = context.keys().map(key => ({
         ...context(key),
-        _path: `/actus/${key.replace('.json', '').replace('./', '')}`
+        _path: `/blog/${key.replace('.json', '').replace('./', '')}`
       }));
 
       return {
