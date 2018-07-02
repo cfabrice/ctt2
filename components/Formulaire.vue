@@ -3,7 +3,7 @@
   <section class="section">
 
    <form method="POST" action="https://formspree.io/fabrice@banquise.ch">
-   <input type="hidden" name="_next" value="https://ctt-puplinge.ch/merci" />
+   <!-- <input type="hidden" name="_next" value="https://ctt-puplinge.ch/merci" /> -->
    <input type="hidden" name="_subject" value="Depuis ctt-puplinge.ch" />
    <input type="hidden" name="_cc" value="fab@wonderweb.ch" />
    <input type="hidden" name="_language" value="fr" />
