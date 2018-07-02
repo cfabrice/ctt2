@@ -8,7 +8,7 @@
 
            <div class="columns is-centered is-multiline">
 
-          <Card-list v-for="post in filteredPosts" :post="post" :key="post._path"
+          <Card-list v-for="post in filteredPosts" :post="post" :key="post._path" :col2="false"
            />
 
       </div>

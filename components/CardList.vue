@@ -1,6 +1,6 @@
 <template>
 
-    <div  class="column is-6-tablet  " :class="{ 'is-4-desktop is-3-widescreen ': $nuxt.$route.path !=='/' }">
+    <div  class="column is-6-tablet  "  v-bind:class="{ 'is-4-desktop is-3-widescreen': col2 }">
       <div class="card ">
         <div class="card-image">
           <figure class="image ">
@@ -47,13 +47,18 @@
 <script>
 
  // console.log(window.location.pathname);
- // console.log (this);
+
 
   export default {
     name: 'CardList',
+
     data() {
+
       return {
         //look: '',
+
+        //col2:
+
       }
     },
     props: {
@@ -64,11 +69,18 @@
           return {}
         }
       },
+      col2: {
+
+        default: function () {
+          return {}
+        }
+      },
 
 
 
 
     },
+
   }
 
 </script>

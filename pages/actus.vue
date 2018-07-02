@@ -7,7 +7,7 @@
     <section class="">
       <div class="columns is-multiline">
 
-          <Card-list v-for="post in displayedPosts" :post="post" :key="post._path" />
+          <Card-list v-for="post in displayedPosts" :post="post" :key="post._path" :col2="true"/>
 
       </div>
     </section>
