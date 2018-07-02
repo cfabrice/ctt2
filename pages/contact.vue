@@ -1,24 +1,21 @@
 <template>
   <article class="column is-8-tablet">
-    <!-- <img v-bind:src="thumbnail" v-bind:alt="title"/> -->
     <h1 class="title is-1 has-text-centered">{{ title }}</h1>
     <div class="content">
-      <!-- <p>{{ body }}</p> -->
       <div v-html="$md.render(body)"></div>
-      <Form/>
-
+    <Formulaire />
     </div>
   </article>
 </template>
 
 <script>
-  import Form from '@/components/Form'
+  import Formulaire from '@/components/Formulaire'
 
   export
   default {
     transition: 'page',
     components: {
-      Form,
+      Formulaire,
     },
     async asyncData({
       params
@@ -37,17 +34,5 @@
 
 </script>
 <style media="screen">
-
-
-
-
-  /* form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  [type="submit"] {
-    margin-top: 3rem;
-  } */
 
 </style>
