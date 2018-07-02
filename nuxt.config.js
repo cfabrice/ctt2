@@ -1,6 +1,6 @@
 const pkg = require('./package')
 
-var glob = require('glob-all');
+var glob = require('glob');
 var path = require('path');
 
 // Enhance Nuxt's generate process by gathering all content files from Netifly CMS
