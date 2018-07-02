@@ -49,6 +49,7 @@
   import LastNews from '@/components/LastNews'
 
   export default {
+    transition: 'page',
 
     layout: 'hero',
     name: 'HomePage',
