@@ -68,3 +68,9 @@
     </form>
   </section>
 </template>
+<script>
+export default {
+   name: 'Formulaire',
+}
+</script>
+
