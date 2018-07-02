@@ -4,7 +4,7 @@
     <div class="content">
       <div v-html="$md.render(body)"></div>
         <div>
-        <Formulaire></Formulaire>
+        form
         </div>
     </div>
   </article>
