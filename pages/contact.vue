@@ -3,9 +3,8 @@
     <h1 class="title is-1 has-text-centered">{{ title }}</h1>
     <div class="content">
       <div v-html="$md.render(body)"></div>
-        <div>
-        form
-        </div>
+
+        <Formulaire/>
     </div>
   </article>
 </template>
