@@ -10,10 +10,9 @@ const globall = require("glob-all");
 // automatically and match it to the path of your Nuxt routes.
 // The Nuxt routes are generate by Nuxt automatically based on the pages folder.
 var dynamicRoutes = getDynamicPaths({
-  '/actus': 'actus/*.json',
-  '/': '*.json'
+  '/actus': 'actus/*.json'
 });
-
+console.log(dynamicRoutes);
 module.exports = {
   mode: 'universal',
 
