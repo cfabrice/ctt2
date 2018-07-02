@@ -12,7 +12,7 @@ const globall = require("glob-all");
 var dynamicRoutes = getDynamicPaths({
   '/actus': 'actus/*.json'
 });
-console.log(dynamicRoutes);
+
 module.exports = {
   mode: 'universal',
 
