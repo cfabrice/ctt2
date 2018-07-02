@@ -39,9 +39,7 @@
 <style media="screen">
 
 
-  .hidden {
-    display: none;
-  }
+
 
   /* form {
     display: flex;

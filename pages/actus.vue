@@ -35,6 +35,7 @@
     components: {
       CardList
     },
+    transition: 'page',
     async asyncData({
       params
     }) {
