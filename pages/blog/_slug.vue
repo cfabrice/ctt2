@@ -31,8 +31,5 @@ export default {
 };
 </script>
 <style media="screen">
-  img {
-
-   }
 
 </style>

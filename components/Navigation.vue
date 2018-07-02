@@ -68,7 +68,7 @@
         { href: '/le-club', title: 'Le Club' },
         //{ href: '/inspire', title: 'Inspire' },
         { href: '/les-cours', title: 'Les Cours' },
-        {href: '/adhésion', title: 'Adhésion'},
+        {href: '/adhesion', title: 'Adhésion'},
         { href: '/actus', title: 'Actualités' },
          { href: '/contact', title: 'Contact' },
       ],

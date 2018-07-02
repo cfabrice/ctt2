@@ -14,7 +14,7 @@ var dynamicRoutes = getDynamicPaths({
 });
 
 module.exports = {
-  mode: 'universal',
+  //mode: 'universal',
 
   /*
    ** Headers of the page
@@ -55,7 +55,7 @@ module.exports = {
    */
   generate: {
     routes: dynamicRoutes,
-    routes: ['404']
+    //routes: ['404']
 
   },
 

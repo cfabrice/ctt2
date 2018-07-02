@@ -2,13 +2,7 @@
   <div>
     <div class="column ">
       <h1 class="title is-1 has-text-centered">Actualités</h1>
-       <h1 class="title is-1 has-text-centered">{{ title }}</h1>
-    <div class="content">
-      <!-- <p>{{ body }}</p> -->
-      <div v-html="$md.render(body)"></div>
-      <Form/>
 
-    </div>
     </div>
     <section class="">
       <div class="columns is-multiline">
