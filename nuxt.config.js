@@ -3,6 +3,9 @@ const pkg = require('./package')
 var glob = require('glob');
 var path = require('path');
 
+const PurgecssPlugin = require("purgecss-webpack-plugin");
+const globall = require("glob-all");
+
 // Enhance Nuxt's generate process by gathering all content files from Netifly CMS
 // automatically and match it to the path of your Nuxt routes.
 // The Nuxt routes are generate by Nuxt automatically based on the pages folder.
@@ -108,6 +111,29 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
+    extend(config, { isDev }) {
+      if (!isDev) {
+        config.plugins.push(
+          new PurgecssPlugin({
+            // purgecss configuration
+            // https://github.com/FullHuman/purgecss
+            paths: globall.sync([
+              path.join(__dirname, './pages/**/*.vue'),
+              path.join(__dirname, './layouts/**/*.vue'),
+              path.join(__dirname, './components/**/*.vue')
+            ]),
+            extractors: [
+              {
+                //extractor: TailwindExtractor,
+                extensions: ['vue']
+              }
+            ],
+            whitelist: ['html', 'body', 'nuxt-progress']
+          })
+        )
+      }
+    },
     /*
      ** You can extend webpack config here
      */
