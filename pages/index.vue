@@ -10,7 +10,7 @@ Et plusieurs cours et plusieurs lieux sont à disposition pour s’entraîner. <
         </div>
       </div>
     </section>
-    <section class="main">
+    <section class=" main">
       <div class="columns is-multiline is-centered">
         <div class="column is-10-tablet">
           <h3 class="title is-3 has-text-centered">Dernières nouvelles</h3>
