@@ -5,9 +5,8 @@
         <div class="column is-10-tablet">
           <!-- <h3 class="title is-3 has-text-centered">Un petit titre</h3> -->
           <p class="has-text-centered accroche">
-            Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis
-            dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. </p>
+            Créé en 1978, le CTT Puplinge compte une trentaine de membres, enfants, jeunes et moins jeunes. Pusieurs équipes participent aux différentes compétitions cantonales et nationales.
+Et plusieurs cours et plusieurs lieux sont à disposition pour s’entraîner. </p>
         </div>
       </div>
     </section>

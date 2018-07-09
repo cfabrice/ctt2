@@ -6,10 +6,10 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        Primary bold title
+        Un club de ping pong pour tous à Puplinge
       </h1>
       <h2 class="subtitle">
-        Primary bold subtitle
+        Pour faire du tennis de table en compétition ou en loisir !
       </h2>
     </div>
   </div>

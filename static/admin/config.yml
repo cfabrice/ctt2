@@ -8,7 +8,7 @@ display_url: https://ctt-puplinge.ch
 collections:
   - name: "actus" # Used in routes, e.g., /admin/collections/blog
     label: "Actus" # Used in the UI
-    folder: "content/actus" # The path to the folder where the documents are stored
+    folder: "content/actus/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'
