@@ -20,7 +20,8 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    //title: pkg.name,
+    titleTemplate: '%s - CTT Puplinge',
     meta: [{
         charset: 'utf-8'
       },

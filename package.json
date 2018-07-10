@@ -1,7 +1,7 @@
 {
-  "name": "ctt",
+  "name": "CTT",
   "version": "1.0.0",
-  "description": "My premium Nuxt.js project",
+  "description": "Club de tennis de table à Puplinge, Genève.",
   "author": "Fabrice Cortat",
   "private": true,
   "scripts": {
