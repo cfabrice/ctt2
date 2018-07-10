@@ -49,6 +49,16 @@
       import ('~/content/actus.json');
       return post;
     },
+    head () {
+    //let post = this.post
+      return {
+        title: this.title,
+        meta: [
+          { hid: 'description', name: 'description', content: this.body },
+          { hid: 'keywords', name: 'keywords', content: 'Actus CTT' }
+        ]
+      }
+    },
 
     directives: {},
     data() {

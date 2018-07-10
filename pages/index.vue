@@ -61,14 +61,14 @@ Et plusieurs cours et plusieurs lieux sont à disposition pour s’entraîner. <
 
       }
     },
-     head () {
-    return {
-      title: 'Accueil',
-      meta: [
-        { hid: 'description', name: 'description', content: 'Bienvenue sur le site du CTT Puplinge' }
-      ]
+    head () {
+      return {
+        title: 'Accueil',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Bienvenue sur le site du CTT Puplinge' }
+        ]
+      }
     }
-  }
   }
 
 </script>

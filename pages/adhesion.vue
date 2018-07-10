@@ -20,6 +20,16 @@
     components: {
 
     },
+    head () {
+    //let post = this.post
+      return {
+        title: this.title,
+        meta: [
+          { hid: 'description', name: 'description', content: this.body },
+          { hid: 'keywords', name: 'keywords', content: 'Adhésion' }
+        ]
+      }
+    },
     async asyncData({
       params
     }) {

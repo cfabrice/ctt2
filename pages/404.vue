@@ -1,14 +1,20 @@
 <template>
 
-  <section class="section">
 
-    <h2 class="title is-3 has-text-grey">"404 Just start  <b-icon icon="rocket" size="is-large" />"</h2>
-    <h3 class="subtitle is-6 has-text-grey">Author: <a href="https://github.com/anteriovieira">Antério Vieira</a></h3>
+  <section class="section main">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="container column is-8-tablet">
 
-    <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+            <h1 class="title is-3 has-text-grey" v-if="error.statusCode === 404">Vous êtes sûr !? <b-icon icon="rocket" size="is-large" /> 404 !</h1>
+            <h1 class="subtitle is-6 has-text-grey" v-else>Une erreur est survenue !</h1>
+            <nuxt-link to="/">Retour sur la page d'accueil</nuxt-link>
 
-Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-  </section>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
 </template>
 
