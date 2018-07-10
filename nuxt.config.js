@@ -111,6 +111,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    analyze: true,
     extractCSS: true,
     extend(config, { isDev }) {
       if (!isDev) {
