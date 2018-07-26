@@ -66,11 +66,13 @@
        menu: [
         { href: '/', title: 'Accueil' },
         { href: '/le-club', title: 'Le Club' },
+         {href: '/le-comite', title: 'Comité'},
         //{ href: '/inspire', title: 'Inspire' },
         { href: '/les-cours', title: 'Les Cours' },
         {href: '/adhesion', title: 'Adhésion'},
         { href: '/actus', title: 'Actualités' },
-         { href: '/contact', title: 'Contact' },
+         {href: '/calendrier-competitions', title: 'Calendrier'},
+        { href: '/contact', title: 'Contact' },
       ],
       }
     },
