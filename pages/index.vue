@@ -5,8 +5,9 @@
         <div class="column is-10-tablet">
           <!-- <h3 class="title is-3 has-text-centered">Un petit titre</h3> -->
           <p class="has-text-centered accroche">
-            Créé en 1978, le CTT Puplinge compte une trentaine de membres, enfants, jeunes et moins jeunes. Pusieurs équipes participent aux différentes compétitions cantonales et nationales.
-Et plusieurs cours et plusieurs lieux sont à disposition pour s’entraîner. </p>
+            Créé en 1978, le CTT Puplinge compte une trentaine de membres, enfants, jeunes et moins jeunes.<br>
+            Plusieurs équipes participent aux  compétitions cantonales et nationales.<br>
+            Différents cours sont dispensés dans les locaux mis à disposition par la commune: salle communale, salle de gymnastique (et abri PC - entraînement libre, robot).</p>
         </div>
       </div>
     </section>
