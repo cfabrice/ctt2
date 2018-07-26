@@ -65,10 +65,10 @@
         showNav: false,
        menu: [
         { href: '/', title: 'Accueil' },
-        { href: '/le-club', title: 'Le Club' },
-         {href: '/le-comite', title: 'Comité'},
+        { href: '/club', title: 'Club' },
+         {href: '/comite', title: 'Comité'},
         //{ href: '/inspire', title: 'Inspire' },
-        { href: '/les-cours', title: 'Les Cours' },
+        { href: '/cours', title: 'Cours' },
         {href: '/adhesion', title: 'Adhésion'},
         { href: '/actus', title: 'Actualités' },
          {href: '/calendrier-competitions', title: 'Calendrier'},

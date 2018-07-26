@@ -26,7 +26,7 @@
         title: this.title,
         meta: [
           { hid: 'description', name: 'description', content: this.body },
-          { hid: 'keywords', name: 'keywords', content: 'club' }
+          { hid: 'keywords', name: 'keywords', content: 'le comité du CTT' }
         ]
       }
     },
@@ -35,7 +35,7 @@
     }) {
 
       let post = await
-      import ('~/content/le-club.json');
+      import ('~/content/comite.json');
       return post;
     }
   };

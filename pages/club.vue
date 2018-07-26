@@ -26,7 +26,7 @@
         title: this.title,
         meta: [
           { hid: 'description', name: 'description', content: this.body },
-          { hid: 'keywords', name: 'keywords', content: 'cours tennis de table, cours ping pong, Genève' }
+          { hid: 'keywords', name: 'keywords', content: 'club' }
         ]
       }
     },
@@ -35,7 +35,7 @@
     }) {
 
       let post = await
-      import ('~/content/les-cours.json');
+      import ('~/content/club.json');
       return post;
     }
   };

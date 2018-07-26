@@ -26,7 +26,7 @@
         title: this.title,
         meta: [
           { hid: 'description', name: 'description', content: this.body },
-          { hid: 'keywords', name: 'keywords', content: 'le comité du CTT' }
+          { hid: 'keywords', name: 'keywords', content: 'cours tennis de table, cours ping pong, Genève' }
         ]
       }
     },
@@ -35,7 +35,7 @@
     }) {
 
       let post = await
-      import ('~/content/le-comite.json');
+      import ('~/content/cours.json');
       return post;
     }
   };
