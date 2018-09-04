@@ -69,7 +69,7 @@
          {href: '/comite', title: 'Comité'},
         //{ href: '/inspire', title: 'Inspire' },
         { href: '/cours', title: 'Cours' },
-        {href: '/adhesion', title: 'Adhésion'},
+        {href: '/cotisations', title: 'Cotisations'},
         { href: '/actus', title: 'Actualités' },
          {href: '/calendrier-competitions', title: 'Calendrier'},
         { href: '/contact', title: 'Contact' },

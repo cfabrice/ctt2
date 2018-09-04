@@ -26,7 +26,7 @@
         title: this.title,
         meta: [
           { hid: 'description', name: 'description', content: this.body },
-          { hid: 'keywords', name: 'keywords', content: 'Adhésion' }
+          { hid: 'keywords', name: 'keywords', content: 'Cotisations' }
         ]
       }
     },
@@ -35,7 +35,7 @@
     }) {
 
       let post = await
-      import ('~/content/adhesion.json');
+      import ('~/content/cotisations.json');
       return post;
     }
   };
