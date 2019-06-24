@@ -86,6 +86,14 @@
           <input class="input" name="nationalite" type="text" placeholder="Votre nationalité">
         </div>
       </div>
+      <div class="field">
+        <div class="control">
+          <input class="input" name="avs" type="text" placeholder="Numéro AVS ">
+          <p
+            class="is-size-7 has-text-grey"
+          >(Pour mineur uniquement - nécessaire à la demande de subvention)</p>
+        </div>
+      </div>
 
       <div class="field">
         <div class="control">
