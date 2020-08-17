@@ -18,8 +18,8 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       #- {label: "Tags", name: "tags", widget: "list"}
-    meta:
-      - {label: "SEO Description", name: "description", widget: "text"}
+    #meta:
+      #- {label: "SEO Description", name: "description", widget: "text"}
 
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
@@ -31,8 +31,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-    meta:
-      - {label: "SEO Description", name: "description", widget: "text"}
+    #meta:
+      #- {label: "SEO Description", name: "description", widget: "text"}
   - label: "Pages spéciales"
     name: "pages-spec"
     files:
@@ -62,4 +62,3 @@ collections:
             - {label: Title, name: title, widget: markdown}
             - {label: Body, name: body, widget: markdown}
         - {label: Other Services, name: other, widget: markdown}
-
