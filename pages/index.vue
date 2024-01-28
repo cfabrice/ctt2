@@ -18,6 +18,17 @@
           <LastNews/>
         </div>
       </div>
+       <div class="">
+          <div id="nuliga-content-teaser-meetings"></div>
+          <div id="nuliga-content-teaser-ranking"></div>
+          <script
+            src="https://clicktt.sportred.de/v1/lib/ZjA2ZjI3MjdlNzlkMTA5N2M0NzBmMmZjOTY2MTA4NWEwNmM3ZWVlNzQyZGNjOTBlZTg2ZWZlZmU2NDM5NDZjMQDcWtRJ9cVOkwHaGNNe1uVHiY6nGiJKE8MwALVtyIuo.js">
+          </script>
+          <script>
+            hb_api.teaser_groupmeetings({element: document.getElementById('nuliga-content-teaser-meetings'), id:212644});
+            hb_api.teaser_groupranking({element: document.getElementById('nuliga-content-teaser-ranking'), id:212644, emptyLayout:true});
+          </script>
+        </div>
 
     </section>
     <!-- <section class="section">
