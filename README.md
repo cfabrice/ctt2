@@ -1,4 +1,7 @@
 # ctt
+- use node 10
+- tout refaire en wordpress
+- 
 
 > My premium Nuxt.js project
 
