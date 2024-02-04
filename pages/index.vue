@@ -79,10 +79,12 @@ export default {
     }
   },
   mounted() {
-    if (typeof hb_api !== 'undefined') {
-      hb_api.teaser_groupmeetings({ element: document.getElementById('nuliga-content-teaser-meetings'), id: 212644 });
-      hb_api.teaser_groupranking({ element: document.getElementById('nuliga-content-teaser-ranking'), id: 212644, emptyLayout: true });
-    }
+      setTimeout(() => {
+      if (typeof hb_api !== 'undefined') {
+        hb_api.teaser_groupmeetings({ element: document.getElementById('nuliga-content-teaser-meetings'), id: 212644 });
+        hb_api.teaser_groupranking({ element: document.getElementById('nuliga-content-teaser-ranking'), id: 212644, emptyLayout: true });
+      }
+    }, 1000);
   }
 
 }
